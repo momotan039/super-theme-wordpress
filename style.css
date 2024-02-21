@@ -1,0 +1,11 @@
+/*
+Theme Name:Super Theme
+Author:Mohammed
+Description:This is a Super Theme ,its just a test theme:)
+Version:1.0.0
+*/
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
