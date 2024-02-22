@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="container">
-            <h1 class="logo"><a href=<?php echo site_url()?>><?php bloginfo('name')?></a></h1>
+            <h1 class="logo"><a href=<?php echo site_url()?>><?php bloginfo('title')?></a></h1>
             <nav>
                 <?php wp_nav_menu()?>
             </nav>
