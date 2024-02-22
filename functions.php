@@ -43,5 +43,33 @@ function create_new_sidebars(){
     'after_widget'  => '',
    ];
    register_sidebar($footer3);
+
+//    create sidebars for Single Page
+$sidebar1=[
+    'id'=>'sidebar1',
+    'name'=>'SideBar Row 1',
+    'description'=>'add widgets here for the content of sidebar1',
+    'before_widget' => '',
+    'after_widget'  => '',
+   ];
+   register_sidebar($sidebar1);
+
+   $sidebar2=[
+    'id'=>'sidebar2',
+    'name'=>'SideBar Row 2',
+    'description'=>'add widgets here for the content of sidebar2',
+    'before_widget' => '',
+    'after_widget'  => '',
+   ];
+   register_sidebar($sidebar2);
+
+   $sidebar3=[
+    'id'=>'sidebar3',
+    'name'=>'SideBar Row 3',
+    'description'=>'add widgets here for the content of sidebar3',
+    'before_widget' => '',
+    'after_widget'  => '',
+   ];
+   register_sidebar($sidebar3);
 }
 add_action('widgets_init','create_new_sidebars');
