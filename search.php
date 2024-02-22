@@ -1,27 +1,32 @@
 <?php get_header() ?>
-<h1>results seach:</h1>
-<section>
-    <?php if (have_posts()) : ?>
-        <?php while (have_posts()) : ?>
-            <!-- call the_post method to prevent the infinty loop -->
-            <?php the_post(); ?>
-            <article>
-                <a href="<?php the_permalink() ?>">
-                    <h3><?php the_title() ?></h3>
-                </a>
-                <?php the_excerpt() ?>
-                <div>
-                    <span>Catgories:<?php the_category(',') ?></span>
-                    <?php the_tags('| tags:', ',') ?>
-                </div>
-                <span>Created By:<?php the_author_posts_link() ?> On:<?php the_date() ?></span>
-            </article>
-            <br>
-        <?php endwhile ?>
-    <?php else : ?>
-        <h2>Theres no results!!</h2>
-    <?php endif ?>
-</section>
 
-<?php get_sidebar() ?>
-<?php wp_footer() ?>
+<div class="banner">
+    <h1>بحثت عن:<?php echo get_search_query('title') ?></h1>
+    <div id="search-container"><?php get_search_form() ?></div>
+</div>
+
+<div class="posts container">
+        <?php if (have_posts()) : while (have_posts()) :
+                the_post()
+        ?>
+                <div class="post card">
+                    <?php if (has_post_thumbnail()) :
+                    ?>
+                        <?php the_post_thumbnail('full')?>
+                    <?php else : ?>
+                        <img src="https://via.placeholder.com/300">
+                    <?php endif; ?>
+
+                    <div>
+                        <h2><a href="<?php the_permalink()?>"><?php the_title() ?></a></h2>
+                        <p><?php the_excerpt() ?></p>
+                        <?php the_category() ?>
+                    </div>
+                </div>
+        <?php
+            endwhile;
+        endif;
+        ?>
+
+    </div>
+<?php get_footer() ?>

@@ -205,6 +205,32 @@ padding: 3rem;
 #single-page .sidebar a{
  font-weight: bold;
 }
+
+#search-container input[type='text']{
+    width: 23rem;
+    height: 3rem;
+    border-radius: 8px;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding-right: 1rem;
+    outline: none;
+}
+#search-container input[type='text']:focus{
+    border-color: var(--primary-color);
+}
+#search-container input[type='submit']{
+    padding: 0.1rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    border-color: transparent;
+    cursor: pointer;
+}
+#search-container input[type='submit']{
+
+}
 /* end single page */
 
 
