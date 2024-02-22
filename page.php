@@ -1,20 +1,19 @@
 <?php get_header() ?>
-<section>
-        <?php if (have_posts()) : ?>
-            <?php while (have_posts()) : ?>
-                <!-- call the_post method to prevent the infinty loop -->
-                <?php the_post( );?>
-                <article>
-                    <a href="<?php the_permalink()?>"><h3><?php the_title()?></h3></a>
-                    <?php the_content()?>
-                    <div>
-                    <span>Catgories:<?php the_category(',')?></span>
-                    <?php the_tags('| tags:',',')?>
-                    </div>
-                    <span>Created By:<?php the_author_posts_link()?> On:<?php the_date()?></span>
-                </article>
-                <br>
-            <?php endwhile?>
-        <?php endif?>
-    </section>
+
+<div id="single-page" class="container">
+    <div class="post card">
+        <div class="header">
+            <h2><?php the_title() ?></h2>
+            <small>
+                <?php echo get_the_date()?>
+                <?php echo the_author()?>
+            </small>
+           <?php the_category() ?>
+        </div>
+        <div class="content">
+            <?php the_content() ?>
+        </div>
+    </div>
+   <?php get_sidebar()?>
+</div>
 <?php get_footer() ?>
