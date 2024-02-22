@@ -1,22 +1,36 @@
 <?php get_header() ?>
-    <section>
-        <?php if (have_posts()) : ?>
-            <?php while (have_posts()) : ?>
-                <!-- call the_post method to prevent the infinty loop -->
-                <?php the_post( );?>
-                <article>
-                    <a href="<?php the_permalink()?>"><h3><?php the_title()?></h3></a>
-                    <?php the_excerpt()?>
-                    <div>
-                    <span>Catgories:<?php the_category(',')?></span>
-                    <?php the_tags('| tags:',',')?>
-                    </div>
-                    <span>Created By:<?php the_author_posts_link()?> On:<?php the_date()?></span>
-                </article>
-                <br>
-            <?php endwhile?>
-        <?php endif?>
-    </section>
 
-    <?php get_sidebar() ?>
-    <?php get_footer() ?>
+<div class="banner">
+    <h1><?php bloginfo('title') ?></h1>
+    <p><?php bloginfo('description') ?></p>
+</div>
+
+<section class="container">
+    <div class="posts">
+        <?php if (have_posts()) : while (have_posts()) :
+                the_post()
+        ?>
+                <div class="post">
+                    <?php if (has_post_thumbnail()) :
+                    ?>
+                        <?php the_post_thumbnail('full')?>
+                    <?php else : ?>
+                        <img src="https://via.placeholder.com/300" alt="">
+                    <?php endif; ?>
+
+                    <div>
+                        <h2><a href="<?php the_permalink()?>"><?php the_title() ?></a></h2>
+                        <p><?php the_excerpt() ?></p>
+                        <?php the_category() ?>
+                    </div>
+                </div>
+        <?php
+            endwhile;
+        endif;
+        ?>
+
+    </div>
+</section>
+
+<?php get_sidebar() ?>
+<?php get_footer() ?>

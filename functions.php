@@ -1,4 +1,8 @@
 <?php
+// theme Support
+add_theme_support( 'post-thumbnails' );
+
+
 function includeStyleFiles(){
     wp_enqueue_style('style', get_stylesheet_uri());
     // make it fit for arabic

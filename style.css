@@ -98,7 +98,59 @@ footer .col ul a{
     text-decoration: none;
 }
 /* end style footer */
+/* start index page */
+.banner{
+    background: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 3rem 0;
+}
+.banner h1{
+    font-size: 3rem;
+}
+.banner p{
+    font-size: 1.5rem;
+}
 
+.posts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.posts .post{
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    gap: 2rem;
+    width: 48%;
+}
+
+.posts .post h2 a{
+    text-decoration: none;
+    color: var(--primary-color) !important;
+}
+
+.posts .post img{
+    width: 300px;
+    height: 300px;
+}
+.posts .post ul{
+list-style-type: none;
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+margin-top: 1rem;
+}
+.posts .post ul a{
+    text-decoration: none;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-size: 1rem;
+    padding: 6px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+/* end index page */
 /* Responsive Rules */
 @media (max-width:768px) {
     .container{
