@@ -1,5 +1,5 @@
 <?php get_header() ?>
-    <section>
+    <section class="container">
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : ?>
                 <!-- call the_post method to prevent the infinty loop -->

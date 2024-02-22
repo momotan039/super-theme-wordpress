@@ -4,8 +4,66 @@ Author:Mohammed
 Description:This is a Super Theme ,its just a test theme:)
 Version:1.0.0
 */
+
+:root{
+    --primary-color:#FC6736;
+    --secondary-color:#FFB0B0;
+    --light-color:#EFECEC;
+    --dark-color:#0C2D57;
+    --max-width:80%
+}
 *{
     margin: 0 ;
     padding: 0;
     box-sizing: border-box;
+    transition: all .3s;
+}
+body{
+    background-color: var(--light-color);
+}
+/* style container */
+.container{
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+/* end style container */
+/* style header */
+header{
+    background-color: #fff;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo a{
+    font-size: 3rem;
+    color: var(--primary-color) !important;
+}
+
+header nav  ul{
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    font-size: 1.8rem;
+}
+
+header  a{
+    text-decoration: none;
+    color: var(--dark-color) ;
+    padding: 0 5px;
+}
+header  a:hover{
+    background-color: var(--light-color);
+    border-radius: 7px;
+}
+/* end style header */
+
+
+/* Responsive Rules */
+@media (max-width:768px) {
+    .container{
+        max-width: 100%;
+        flex-direction: column;
+    }
 }
