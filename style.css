@@ -157,9 +157,13 @@ margin-top: 1rem;
         max-width: 100%;
         flex-direction: column;
     }
+    .posts .post{
+        width: 100%;
+    }
     footer .col:not(:last-child){
         border-left: none;
         border-bottom: 5px var(--primary-color) solid;
         padding-bottom: 2rem;
     }
+    
 }

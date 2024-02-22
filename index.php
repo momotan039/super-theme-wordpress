@@ -5,8 +5,7 @@
     <p><?php bloginfo('description') ?></p>
 </div>
 
-<section class="container">
-    <div class="posts">
+<div class="posts container">
         <?php if (have_posts()) : while (have_posts()) :
                 the_post()
         ?>
@@ -30,7 +29,5 @@
         ?>
 
     </div>
-</section>
-
 <?php get_sidebar() ?>
 <?php get_footer() ?>
