@@ -13,6 +13,11 @@
         <div class="content">
             <?php the_content() ?>
         </div>
+        <div class="pagination">
+            <br>
+         <h2>مقالات اخرى</h2>
+        <?php get_template_part('pagination')?>
+        </div>
     </div>
    <?php get_sidebar()?>
 </div>

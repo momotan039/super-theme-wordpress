@@ -127,6 +127,7 @@ list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-top: 1rem;
 }
 .posts .post{
     background-color: #fff;
@@ -161,6 +162,27 @@ margin-top: 1rem;
     border-radius: 5px;
     font-weight: bold;
 }
+#pagination {
+    margin-top: 1rem;
+}
+#pagination .next,
+#pagination .before{
+    font-size: 1.8rem;
+    border-radius: 8px;
+    padding: 1rem;
+}
+#pagination .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+#pagination .row>div:hover{
+background-color: var(--dark-color);
+}
+#pagination .row>div:hover a{
+    color: var(--light-color);
+    }
 /* end index page */
 
 /* start single page */
@@ -227,9 +249,6 @@ padding: 3rem;
     color: var(--primary-color);
     border-color: transparent;
     cursor: pointer;
-}
-#search-container input[type='submit']{
-
 }
 /* end single page */
 
