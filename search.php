@@ -1,7 +1,7 @@
 <?php get_header() ?>
 
 <div class="banner">
-    <h1>بحثت عن:<?php echo get_search_query('title') ?></h1>
+    <h1>بحثت عن:<?php echo get_search_query() ?></h1>
     <div id="search-container"><?php get_search_form() ?></div>
 </div>
 

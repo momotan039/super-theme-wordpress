@@ -122,6 +122,11 @@ list-style-type: none;
 .card{
     border-radius: 8px;
     background-color: #fff;
+    padding: 2rem 0;
+}
+h2.sub-title{
+    text-align: center;
+    color: var(--primary-color);
 }
 .posts{
     display: flex;
@@ -133,6 +138,7 @@ list-style-type: none;
     background-color: #fff;
     padding: 1rem;
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     width: 48%;
 }
@@ -142,7 +148,7 @@ list-style-type: none;
 }
 
 .posts .post img{
-    width: 300px;
+    width: 100%;
     height: 300px;
 }
 .posts .post ul,
@@ -170,7 +176,9 @@ margin-top: 1rem;
     font-size: 1.8rem;
     border-radius: 8px;
     padding: 1rem;
+    font-weight: bold;
 }
+
 #pagination .row{
     display: flex;
     flex-wrap: wrap;

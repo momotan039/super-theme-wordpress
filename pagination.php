@@ -8,12 +8,13 @@
         </div>
     <?php else : ?>
         <div class="row">
-        <div class="next">
-            <?php echo next_posts_link('التالي') ?>
-        </div>
-        <div class="before">
-            <?php echo previous_posts_link('السابق') ?>
-        </div>
+            <?php
+            if ($newer_posts_link=get_next_posts_link('السابقة'))
+                echo '<div class="next"><i class="fa-solid fa-arrow-right"></i>' . $newer_posts_link . '</div>';
+
+            if ($older_posts_link=get_previous_posts_link('التالية'))
+                echo '<div class="next">' . $older_posts_link . '<i class="fa-solid fa-arrow-left"></i></div>';
+            ?>
         </div>
     <?php endif ?>
 </div>
